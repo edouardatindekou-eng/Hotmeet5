@@ -1,0 +1,25 @@
+.profile {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
+
+.profile h1 {
+  color: var(--primary-red);
+  margin-bottom: 30px;
+}
+
+.profile-card {
+  max-width: 500px;
+}
+
+.profile-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    max-width: 100%;
+  }
+}
