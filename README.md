@@ -1,146 +1,62 @@
-# 🔴 HotMeet - Plateforme de Rencontres Moderne
+# HotMeet - Version Ultra Simplifiée
 
-Une plateforme de rencontres responsive et moderne construite avec React, Node.js, GraphQL et PostgreSQL.
+Une plateforme de rencontres complète en **3 fichiers seulement** ! 🚀
+
+## 📦 Fichiers
+
+1. `package.json` - Dépendances
+2. `.env.example` - Configuration
+3. `server.js` - Backend + Frontend tout-en-un
+
+## 🚀 Démarrage rapide sur Replit
+
+### Étape 1 : Créez un projet Replit
+1. Allez sur https://replit.com
+2. Cliquez "Create" → Sélectionnez "Node.js"
+3. Nommez-le `hotmeet`
+
+### Étape 2 : Uploadez les fichiers
+1. Cliquez sur "Upload" (flèche vers le haut)
+2. Uploadez les 3 fichiers :
+   - `package.json`
+   - `.env.example` → Renommez en `.env`
+   - `server.js`
+
+### Étape 3 : Configurez MongoDB
+1. Allez sur https://www.mongodb.com/cloud/atlas
+2. Créez un compte gratuit
+3. Créez une base de données "M0" (gratuit)
+4. Copiez l'URL de connexion
+
+### Étape 4 : Configurez le `.env`
+Éditez le fichier `.env` :
+```
+MONGODB_URI=mongodb+srv://votre_email:password@cluster.mongodb.net/hotmeet
+JWT_SECRET=ma_cle_super_secrete_12345
+PORT=3000
+```
+
+### Étape 5 : Lancez l'app
+1. Cliquez "Run"
+2. Attendez 30 secondes
+3. Cliquez le lien en haut pour accéder à HotMeet
 
 ## ✨ Fonctionnalités
 
-✅ **Authentification** - Inscription/Connexion avec JWT
-✅ **Profils Utilisateurs** - Bio, photos (4 max), âge, localisation, intérêts
-✅ **Système de Like** - Système classique de like/unlike
-✅ **Recherche Filtrée** - Filtrer par âge, localisation, intérêts
-✅ **Messagerie Temps Réel** - WebSocket pour les messages instantanés
-✅ **Notifications** - Notifications en temps réel
-✅ **Système Premium** - Subscriptions avec expiration
-✅ **Design Responsive** - Adapté à tous les appareils
-✅ **Couleurs** - Rouge et Blanc avec design moderne
+✅ Inscription/Connexion
+✅ Profils utilisateurs
+✅ Système de like
+✅ Messagerie
+✅ Recherche d'utilisateurs
+✅ Design rouge & blanc responsive
 
-## 🏗️ Architecture
+## 📱 Accès depuis Android
 
-```
-hotmeet5/
-├── backend/              # Node.js + Express + GraphQL
-│   ├── src/
-│   │   ├── graphql/      # TypeDefs et Resolvers
-│   │   ├── services/     # Logique métier
-│   │   ├── db/           # Pool PostgreSQL
-│   │   ├── middleware/   # Authentification JWT
-│   │   └── websocket/    # Gestion des messages temps réel
-│   └── package.json
-└── frontend/             # React
-    ├── src/
-    │   ├── pages/        # Pages principales
-    │   ├── styles/       # CSS
-    │   └── App.js
-    └── package.json
-```
-
-## 🚀 Installation Rapide
-
-### Prérequis
-- Node.js v16+
-- PostgreSQL v12+
-- npm ou yarn
-
-### 1. Backend
-
-```bash
-cd backend
-npm install
-cp .env.example .env
-```
-
-Configurez votre `.env` :
-```
-DATABASE_URL=postgresql://user:password@localhost:5432/hotmeet
-JWT_SECRET=your_super_secret_key
-PORT=4000
-NODE_ENV=development
-```
-
-Initialisez la base de données :
-```bash
-psql -U postgres -d hotmeet -f src/db/schema.sql
-```
-
-Démarrez le serveur :
-```bash
-npm run dev
-```
-
-### 2. Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
-## 📊 Base de Données
-
-Schéma PostgreSQL inclut :
-- `users` - Profils utilisateurs avec is_premium, subscription_type, subscription_expiry
-- `profile_photos` - Jusqu'à 4 photos par utilisateur
-- `likes` - Système de likes
-- `messages` - Conversations
-- `conversations` - Groupes de messages
-- `notifications` - Notifications en temps réel
-- `blocks` - Utilisateurs bloqués
-
-## 🔐 Authentification
-
-- JWT tokens
-- Passwords hashés avec bcryptjs
-- Tokens d'expiration configurable
-
-## 📱 API GraphQL
-
-### Queries
-- `me` - Récupérer l'utilisateur actuel
-- `user(id)` - Récupérer un utilisateur
-- `searchUsers(filters)` - Chercher des utilisateurs
-- `getMessages(conversationId)` - Récupérer les messages
-- `getConversations` - Lister les conversations
-- `getNotifications` - Lister les notifications
-
-### Mutations
-- `register` - Créer un compte
-- `login` - Se connecter
-- `updateProfile` - Mettre à jour le profil
-- `uploadPhoto` - Ajouter une photo
-- `likeUser` - Liker un utilisateur
-- `sendMessage` - Envoyer un message
-- `blockUser` - Bloquer un utilisateur
-- `upgradeToPremium` - Passer en premium
-
-## 🎨 Design
-
-- **Couleurs** : Rouge (#dc143c) et Blanc
-- **Responsive** : Mobile, Tablet, Desktop
-- **Style** : Moderne et minimaliste
-
-## 🌐 Déploiement
-
-### Frontend (GitHub Pages)
-```bash
-cd frontend
-npm run build
-```
-
-### Backend (Heroku/Railway)
-```bash
-git push heroku main
-```
-
-## 🤝 Contribution
-
-Les contributions sont bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
-
-## 📝 Licence
-
-MIT - Libre d'utilisation
+Une fois lancé sur Replit, vous pouvez accéder depuis :
+- Votre téléphone Android
+- Votre navigateur mobile
+- N'importe quel appareil
 
 ---
 
-**Créé avec ❤️ par HotMeet Team**
-
-🚀 Prêt à lancer ? Commencez par installer les dépendances !
+**Créé avec ❤️ pour les débutants**
